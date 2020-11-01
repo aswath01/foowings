@@ -3,7 +3,7 @@ body{
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
     color: $dark;
-    height: 4000px;
+    height: 400px;
 }
 nav li:last-child a {
     background: $primary;
@@ -32,6 +32,24 @@ nav li a {
         
     }
 }
-.menu container mx-auto py-8{
-    background: $secondary;
+.hero{
+    height: 700px;
+}
+.btn-primary{
+    border: 2px solid $primary;
+    color: $primary;
+  
+    transition: .7s;
+    &:hover{
+        background: $primary;
+        border-color: $pure;
+        color: $pure;
+        transition: .7s;
+       
+    }
+}
+section.login{
+    
+    min-height: calc(100vh-86px);
+   
 }

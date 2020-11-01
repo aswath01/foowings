@@ -2,7 +2,7 @@ body {
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #232323;
-  height: 4000px;
+  height: 400px;
 }
 
 nav li:last-child a {
@@ -37,7 +37,24 @@ nav li a:hover {
   color: #fff;
 }
 
-.menu container mx-auto py-8 {
-  background: #F8F8F8;
+.hero {
+  height: 700px;
+}
+
+.btn-primary {
+  border: 2px solid #FE5F1E;
+  color: #FE5F1E;
+  transition: 0.7s;
+}
+
+.btn-primary:hover {
+  background: #FE5F1E;
+  border-color: #fff;
+  color: #fff;
+  transition: 0.7s;
+}
+
+section.login {
+  min-height: calc(100vh-86px);
 }
 
