@@ -1,0 +1,37 @@
+@import './variables';
+body{
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: $dark;
+    height: 4000px;
+}
+nav li:last-child a {
+    background: $primary;
+    &:hover{
+        
+    background: $primary-hover;
+    }
+}
+nav li a {
+    transition: all .3s ease-in-out;
+    &:hover{
+    color: $primary;
+    }
+}
+.size{
+    background: $secondary;
+}
+.add-to-cart{
+    border: 2px solid $primary;
+    color: $primary;
+    transition: .3s;
+    &:hover{
+        background: $primary;
+        border-color: $pure;
+        color: $pure;
+        
+    }
+}
+.menu container mx-auto py-8{
+    background: $secondary;
+}
