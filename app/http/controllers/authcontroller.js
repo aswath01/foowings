@@ -1,4 +1,6 @@
 const { render } = require("ejs")
+const bcrypt = require('bcrypt')
+const passport = require('passport')
 const User = require('../../models/user')
 function authcontroller(){
     //factory functions
@@ -16,7 +18,7 @@ function authcontroller(){
                 }
                 if(!user){
                     req.flash('error',info.message)
-                    return res.redirect('/login')
+                    return res.redirect('/auth/login')
                 }
                 req.logIn(user,(err)=>{
                     if(err){
@@ -31,9 +33,12 @@ function authcontroller(){
         },
         registration(req,res){
             res.render('auth/registration')
-
+        
         },
         async postRegistration(req, res) {
+         
+
+            
             const { name, email, password }   = req.body
             // Validate request 
             if(!name || !email || !password) {
@@ -68,6 +73,7 @@ function authcontroller(){
             }).catch(err => {
                req.flash('error', 'Something went wrong')
                    return res.redirect('/registration')
+                   console.log(req.body)
             })
            },
            logout(req, res) {
