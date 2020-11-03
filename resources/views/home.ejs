@@ -19,139 +19,29 @@
                 <h1 class="text-4xl  py-4 flex justify-center">M E N U</h1>
                 <br />
                 <div class="grid grid-cols-4 col-gap-12 row-gap-16">
-                    <div class="w-64">
-                        <img class="h-40 mb-4 mx-auto"src="/img/pasta.jpg" alt="">
-                        <div class="text-center" >
-                            <h2 class="mb-4 text-lg">pasta</h2>
-                            <span class="size py-1 px-4 rounded-full uppercase text-xs">white sauce and red sauce</span>
-                            <div class="flex items-center justify-center py-4">
-                                <span class="font-bold text-lg w-1/2">
-                                    rs.150
-                                </span>
-                                <button class="add-to-cart py-1 px-6 rounded-full w-1/2">
-                                    <span>+</span>
-                                    <span>add</span>
-                                </button>
-                                </div>
-                            </div>
 
-                    </div>
-                    <div class="w-64">
-                        <img class="h-40 mb-4 mx-auto"src="/img/momos.jpg" alt="">
-                        <div class="text-center" >
-                            <h2 class="mb-4 text-lg">momos</h2>
-                            <span class="size py-1 px-4 rounded-full uppercase text-xs">with chutney</span>
-                            <div class="flex items-center justify-center py-4">
-                                <span class="font-bold text-lg w-1/2">
-                                    rs.200
-                                </span>
-                                <button class="add-to-cart py-1 px-6 rounded-full w-1/2">
-                                    <span>+</span>
-                                    <span>add</span>
-                                </button>
-                                </div>
-                            </div>
+                    <% foowings.forEach(function(foowings){ %>
 
-                    </div>
-                    <div class="w-64">
-                        <img class="h-40 mb-4 mx-auto"src="/img/waffels.jpg" alt="">
-                        <div class="text-center" >
-                            <h2 class="mb-4 text-lg">waffels</h2>
-                            <span class="size py-1 px-4 rounded-full uppercase text-xs">white sauce</span>
-                            <div class="flex items-center justify-center py-4">
-                                <span class="font-bold text-lg w-1/2">
-                                    rs.250
-                                </span>
-                                <button class="add-to-cart py-1 px-6 rounded-full w-1/2">
-                                    <span>+</span>
-                                    <span>add</span>
-                                </button>
+                        <div class="w-64">
+                            <img class="h-40 mb-4 mx-auto"src="/img/<%= foowings.image%>" alt="">
+                            <div class="text-center" >
+                                <h2 class="mb-4 text-lg"><%= foowings.name%></h2>
+                                <span class="size py-1 px-4 rounded-full uppercase text-xs">white sauce and red sauce</span>
+                                <div class="flex items-center justify-center py-4">
+                                    <span class="font-bold text-lg w-1/2">
+                                        <%= foowings.price%>
+                                    </span>
+                                    <button data-foowings="<%= JSON.stringify(foowings)%>" class="add-to-cart py-1 px-6 rounded-full w-1/2">
+                                        <span>+</span>
+                                        <span>add</span>
+                                    </button>
+                                    </div>
                                 </div>
-                            </div>
-
-                    </div>
-                    <div class="w-64">
-                        <img class="h-40 mb-4 mx-auto"src="/img/grill sandwich.jpg" alt="">
-                        <div class="text-center" >
-                            <h2 class="mb-4 text-lg">grill sandwich</h2>
-                            <span class="size py-1 px-4 rounded-full uppercase text-xs">white sauce</span>
-                            <div class="flex items-center justify-center py-4">
-                                <span class="font-bold text-lg w-1/2">
-                                    rs.150
-                                </span>
-                                <button class="add-to-cart py-1 px-6 rounded-full w-1/2">
-                                    <span>+</span>
-                                    <span>add</span>
-                                </button>
-                                </div>
-                            </div>
-
-                    </div>
-                    <div class="w-64">
-                        <img class="h-40 mb-4 mx-auto"src="/img/stakes.jpg" alt="">
-                        <div class="text-center" >
-                            <h2 class="mb-4 text-lg">stakes</h2>
-                            <span class="size py-1 px-4 rounded-full uppercase text-xs">white sauce</span>
-                            <div class="flex items-center justify-center py-4">
-                                <span class="font-bold text-lg w-1/2">
-                                    rs.400
-                                </span>
-                                <button class="add-to-cart py-1 px-6 rounded-full w-1/2">
-                                    <span>+</span>
-                                    <span>add</span>
-                                </button>
-                                </div>
-                            </div>
-
-                    </div>
-                    <div class="w-64">
-                        <img class="h-40 mb-4 mx-auto"src="/img/soup.jpg" alt="">
-                        <div class="text-center" >
-                            <h2 class="mb-4 text-lg">soup</h2>
-                            <span class="size py-1 px-4 rounded-full uppercase text-xs">white sauce</span>
-                            <div class="flex items-center justify-center py-4">
-                                <span class="font-bold text-lg w-1/2">
-                                    rs.100
-                                </span>
-                                <button class="add-to-cart py-1 px-6 rounded-full w-1/2">
-                                    <span>+</span>
-                                    <span>add</span>
-                                </button>
-                                </div>
-                            </div>
-
-                    </div>
-
-                    <div class="w-64">
-                        <img class="h-40 mb-4 mx-auto"src="/img/salad.jpg" alt="">
-                        <div class="text-center" >
-                            <h2 class="mb-4 text-lg">fruit salad</h2>
-                            <span class="size py-1 px-4 rounded-full uppercase text-xs">white sauce</span>
-                            <div class="flex items-center justify-center py-4">
-                                <span class="font-bold text-lg w-1/2">
-                                    rs.150
-                                </span>
-                                <button class="add-to-cart py-1 px-6 rounded-full w-1/2">
-                                    <span>+</span>
-                                    <span>add</span>
-                                </button>
-                                </div>
-                            </div>
-
-                    </div>     <div class="w-64">
-                        <img class="h-40 mb-4 mx-auto"src="/img/burger and fries.jpg" alt="">
-                        <div class="text-center" >
-                            <h2 class="mb-4 text-lg">burger and fries</h2>
-                            <span class="size py-1 px-4 rounded-full uppercase text-xs">white sauce</span>
-                            <div class="flex items-center justify-center py-4">
-                                <span class="font-bold text-lg w-1/2">
-                                    rs.300
-                                </span>
-                                <button class="add-to-cart py-1 px-6 rounded-full w-1/2">
-                                    <span>+</span>
-                                    <span>add</span>
-                                </button>
-                                </div>
+    
+                        </div>
+    
+                  <%  })%>
+                 
                             </div>
    
 
