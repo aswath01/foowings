@@ -10,7 +10,7 @@ const session = require('express-session')
 const flash = require ('express-flash')
 const { MongoStore } = require('connect-mongo')
 const MongoDbStore = require('connect-mongo')(session)
-var passport = require('passport')
+const passport = require('passport')
 
 //db
 //ma'am since my lap is not having win 10 so i had to go with atlas not comm server
@@ -23,10 +23,7 @@ connection.once('open', ()=>{
 }).catch(err => {
     console.log('connection failed..')
 });
-//passport
-
 //
-
 let mongoStore = new MongoDbStore({
     mongooseConnection: connection,
     collection: 'sessions'
@@ -50,13 +47,14 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(flash())
+
 app.use(express.static('public'))
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 app.use((req,res,next) => {
     res.locals.session = req.session
-    res.locals.user = req.user
+    res.locals.user=req.user
     next()
 })
 //connecting template

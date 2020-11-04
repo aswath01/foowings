@@ -15,13 +15,18 @@
             <div>
                 <ul class="flex items-center">
                     <%if(user) {%>
-                    <li class="ml-6"><a href="/logout"><b>logout</b></a></li>
+                        <li class="ml-6">
+                            <form id="logout" action="/logout" method="POST">
+                                <li class="ml-6"><a onclick="document.getElementById('logout').submit()" href="/#"><b>logout</b></a></li>
+                            </form>
+                    
+                    </li>
                     <% }else{%>
                         <li class="ml-6"><a href="/registration"><b>REGISTRATION</b></a></li>
                     <li class="ml-6"><a href="/login"><b>LOGIN</b></a></li>
                     <%}%>
                     <li class="ml-6"><a href="/cart" class="inline-block px-4 py-2 rounded-full">
-                        <span id="cartcounter" class="text-white font-bold pr-2"><%= session.cart ? session.cart.totalQty:''%></span><img src="/img/cart.png"></a></li>
+                        <span id="cartcounter" class="text-white font-bold  "><%= session.cart ? session.cart.totalQty:''%></span><img src="/img/cart.png"></a></li>
                     
                 </ul>
                 </div>   
